@@ -1,0 +1,3002 @@
+/* ========================================
+   E-WEST LOGÍSTICA
+   ESTILOS GENERALES
+======================================== */
+
+/* ========================================
+   VARIABLES
+======================================== */
+
+:root {
+  --color-bg: #101010;
+  --color-bg-secondary: #181818;
+  --color-card: #202020;
+
+  --color-red: #d32f2f;
+  --color-red-hover: #f44336;
+
+  --color-white: #ffffff;
+  --color-text: #e5e5e5;
+  --color-text-secondary: #a8a8a8;
+
+  --color-border: #303030;
+
+  --container-width: 1200px;
+}
+
+/* ========================================
+   RESET
+======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+/* ========================================
+   CONTENEDOR GENERAL
+======================================== */
+
+.section-container {
+  width: min(90%, var(--container-width));
+  margin: 0 auto;
+}
+
+/* ========================================
+   TÍTULOS DE SECCIÓN
+======================================== */
+
+.section-header {
+  max-width: 720px;
+  margin-bottom: 50px;
+}
+
+.section-tag {
+  color: var(--color-red);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.section-header h2 {
+  color: var(--color-white);
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.15;
+  margin-bottom: 18px;
+}
+
+.section-header > p:not(.section-tag) {
+  color: var(--color-text-secondary);
+  font-size: 1.05rem;
+}
+
+/* ========================================
+   ESPACIADO DE SECCIONES
+======================================== */
+
+.services,
+.process,
+.why-us,
+.coverage,
+.about,
+.sellers,
+.contact {
+  padding: 100px 0;
+}
+/* ========================================
+   HEADER
+======================================== */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  background-color: rgba(16, 16, 16, 0.95);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header-container {
+  width: min(92%, 1400px);
+  height: 80px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+/* Logo */
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  color: var(--color-white);
+  font-size: 1.5rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.logo-pin {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.logo-name {
+  display: inline-block;
+  color: var(--color-white);
+  font-weight: 800;
+}
+
+.logo-name > span {
+  color: var(--color-red);
+  font-weight: 400;
+}
+
+/* Navegación */
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav a {
+  color: var(--color-text);
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.nav a:hover {
+  color: var(--color-red);
+}
+
+/* Botón WhatsApp del header */
+
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 20px;
+
+  background-color: var(--color-red);
+  color: var(--color-white);
+
+  border-radius: 6px;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+  background-color: var(--color-red-hover);
+  transform: translateY(-2px);
+}
+/* Botón menú móvil */
+.menu-toggle {
+  display: none;
+}
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+
+  padding: 140px 5% 80px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(16, 16, 16, 1) 0%,
+      rgba(16, 16, 16, 0.97) 32%,
+      rgba(16, 16, 16, 0.78) 52%,
+      rgba(16, 16, 16, 0.25) 100%
+    ),
+    url("../assets/img/hero-logistica.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: min(100%, 1200px);
+  margin: 0 auto;
+}
+
+/* Texto pequeño superior */
+
+.hero-tag {
+  color: var(--color-red);
+
+  font-size: 0.9rem;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  margin-bottom: 18px;
+}
+
+/* Título principal */
+
+.hero h1 {
+  max-width: 850px;
+
+  color: var(--color-white);
+
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  line-height: 1;
+  letter-spacing: -2px;
+
+  margin-bottom: 28px;
+}
+.hero h1 span {
+  display: block;
+  color: var(--color-red);
+}
+
+/* Descripción */
+
+.hero-description {
+  max-width: 680px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 1.15rem;
+  line-height: 1.8;
+
+  margin-bottom: 35px;
+}
+
+/* Botones */
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* Botón principal */
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 48px;
+  padding: 12px 24px;
+
+  border: 2px solid var(--color-red);
+  border-radius: 6px;
+
+  background-color: var(--color-red);
+  color: var(--color-white);
+
+  font-weight: 700;
+  cursor: pointer;
+
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-red-hover);
+  border-color: var(--color-red-hover);
+
+  transform: translateY(-2px);
+}
+
+/* Botón secundario */
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 48px;
+  padding: 12px 24px;
+
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+
+  background-color: transparent;
+  color: var(--color-white);
+
+  font-weight: 700;
+
+  transition:
+    border-color 0.3s ease,
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.btn-secondary:hover {
+  border-color: var(--color-red);
+  background-color: rgba(211, 47, 47, 0.08);
+
+  transform: translateY(-2px);
+}
+
+/* ========================================
+   SERVICIOS
+======================================== */
+
+.services {
+  background-color: var(--color-bg-secondary);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.service-card {
+  position: relative;
+
+  min-height: 230px;
+  padding: 30px;
+
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background-color 0.3s ease;
+}
+
+/* Línea roja superior */
+
+.service-card::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 45px;
+  height: 3px;
+
+  background-color: var(--color-red);
+
+  transition: width 0.3s ease;
+}
+
+/* Hover de la tarjeta */
+
+.service-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(211, 47, 47, 0.5);
+  background-color: #242424;
+}
+
+.service-card:hover::before {
+  width: 100%;
+}
+
+/* Título */
+
+.service-card h3 {
+  color: var(--color-white);
+
+  font-size: 1.25rem;
+  line-height: 1.3;
+
+  margin-bottom: 15px;
+}
+
+/* Descripción */
+
+.service-card p {
+  color: var(--color-text-secondary);
+
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* Texto destacado de Fulfillment */
+
+.service-highlight {
+  display: block;
+
+  margin-top: 20px;
+
+  color: var(--color-red);
+
+  font-size: 0.8rem;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+/* ========================================
+   CÓMO TRABAJAMOS
+======================================== */
+
+.process {
+  background-color: var(--color-bg);
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 0;
+  row-gap: 90px;
+
+  position: relative;
+
+  margin-top: 20px;
+}
+
+/* Cada paso */
+
+.process-step {
+  position: relative;
+  z-index: 1;
+
+  padding: 0 25px 0 0;
+}
+/* ========================================
+   CONEXIONES ENTRE PASOS
+======================================== */
+
+/* Líneas horizontales normales */
+
+.process-step::after {
+  content: "";
+
+  position: absolute;
+
+  top: 35px;
+  left: 70px;
+
+  width: calc(100% - 70px);
+  height: 2px;
+
+  background: linear-gradient(
+    to right,
+    var(--color-red) 0%,
+    var(--color-red) 50%,
+    var(--color-border) 50%,
+    var(--color-border) 100%
+  );
+
+  background-size: 200% 100%;
+  background-position: 100% 0;
+
+  transition: background-position 0.5s ease;
+
+  z-index: -1;
+}
+
+/* Ilumina la línea */
+
+.process-step:hover::after {
+  background-position: 0 0;
+}
+
+/* El paso 04 usa una conexión especial */
+
+.process-step:nth-child(4)::after {
+  display: none;
+}
+
+/* El paso 07 termina el recorrido */
+
+.process-step:nth-child(7)::after {
+  display: none;
+}
+/* ========================================
+   CONTINUACIÓN VISUAL 04 → 05
+======================================== */
+
+.route-dots {
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 1.4rem;
+  font-weight: 700;
+
+  opacity: 0.65;
+
+  white-space: nowrap;
+
+  pointer-events: none;
+}
+
+/* Salida del 04 */
+
+.route-dots-out {
+  top: 17px;
+  left: 82px;
+}
+
+/* Entrada al 05 */
+
+.route-dots-in {
+  top: 17px;
+  right: calc(100% + 10px);
+}
+/* ========================================
+   ANIMACIÓN PROGRESIVA 04 → 05
+======================================== */
+
+/* Cada punto conserva exactamente su tamaño y posición */
+
+.route-dots span {
+  color: var(--color-text-secondary);
+
+  transition: color 0.12s ease;
+}
+
+/* ----------------------------------------
+   SALIDA DEL 04
+---------------------------------------- */
+
+.process-step:nth-child(4):hover .route-dots-out span:nth-child(1) {
+  color: var(--color-red);
+  transition-delay: 0s;
+}
+
+.process-step:nth-child(4):hover .route-dots-out span:nth-child(2) {
+  color: var(--color-red);
+  transition-delay: 0.1s;
+}
+
+.process-step:nth-child(4):hover .route-dots-out span:nth-child(3) {
+  color: var(--color-red);
+  transition-delay: 0.2s;
+}
+
+.process-step:nth-child(4):hover .route-dots-out span:nth-child(4) {
+  color: var(--color-red);
+  transition-delay: 0.3s;
+}
+
+/* ----------------------------------------
+   CONTINÚA ANTES DEL 05
+   pero sigue dependiendo del hover del 04
+---------------------------------------- */
+
+.process-grid:has(.process-step:nth-child(4):hover)
+  .process-step:nth-child(5)
+  .route-dots-in
+  span:nth-child(1) {
+  color: var(--color-red);
+  transition-delay: 0.4s;
+}
+
+.process-grid:has(.process-step:nth-child(4):hover)
+  .process-step:nth-child(5)
+  .route-dots-in
+  span:nth-child(2) {
+  color: var(--color-red);
+  transition-delay: 0.5s;
+}
+
+.process-grid:has(.process-step:nth-child(4):hover)
+  .process-step:nth-child(5)
+  .route-dots-in
+  span:nth-child(3) {
+  color: var(--color-red);
+  transition-delay: 0.6s;
+}
+
+.process-grid:has(.process-step:nth-child(4):hover)
+  .process-step:nth-child(5)
+  .route-dots-in
+  span:nth-child(4) {
+  color: var(--color-red);
+  transition-delay: 0.7s;
+}
+/* Número */
+
+.step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 70px;
+  height: 70px;
+
+  margin-bottom: 25px;
+
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+
+  color: var(--color-red);
+
+  font-size: 1.1rem;
+  font-weight: 800;
+
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* Título del paso */
+
+.process-step h3 {
+  color: var(--color-white);
+
+  font-size: 1.15rem;
+
+  margin-bottom: 10px;
+}
+
+/* Descripción */
+
+.process-step p {
+  max-width: 250px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* Efecto al pasar el mouse */
+
+.process-step:hover .step-number {
+  background-color: var(--color-red);
+  border-color: var(--color-red);
+
+  color: var(--color-white);
+
+  transform: scale(1.08);
+}
+
+/* Resumen del proceso */
+
+.process-summary {
+  margin-top: 30px;
+  padding: 25px 30px;
+
+  border-left: 3px solid var(--color-red);
+  background-color: var(--color-bg-secondary);
+}
+
+.process-summary p {
+  color: var(--color-white);
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  letter-spacing: 0.5px;
+}
+/* ========================================
+   ¿POR QUÉ E-WEST?
+======================================== */
+
+.why-us {
+  background-color: var(--color-bg-secondary);
+}
+
+/* Grilla */
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Tarjetas */
+
+.why-card {
+  position: relative;
+
+  min-height: 210px;
+  padding: 30px;
+
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background-color 0.3s ease;
+}
+
+/* Detalle rojo lateral */
+
+.why-card::before {
+  content: "";
+
+  position: absolute;
+  top: 30px;
+  left: 0;
+
+  width: 3px;
+  height: 35px;
+
+  background-color: var(--color-red);
+
+  transition:
+    top 0.3s ease,
+    height 0.3s ease;
+}
+
+/* Hover */
+
+.why-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(211, 47, 47, 0.5);
+  background-color: #242424;
+}
+
+.why-card:hover::before {
+  top: 0;
+  height: 100%;
+}
+
+/* Título */
+
+.why-card h3 {
+  color: var(--color-white);
+
+  font-size: 1.2rem;
+  line-height: 1.3;
+
+  margin-bottom: 14px;
+}
+
+/* Descripción */
+
+.why-card p {
+  color: var(--color-text-secondary);
+
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* Mensaje final */
+
+.why-message {
+  margin-top: 35px;
+  padding: 25px 30px;
+
+  background-color: var(--color-bg);
+  border-left: 3px solid var(--color-red);
+}
+
+.why-message p {
+  color: var(--color-white);
+
+  font-size: 1.05rem;
+  font-weight: 600;
+
+  letter-spacing: 0.3px;
+}
+/* ========================================
+   COBERTURA
+======================================== */
+
+.coverage {
+  background-color: var(--color-bg);
+}
+
+/* Contenido principal */
+
+.coverage-content {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 50px;
+  align-items: stretch;
+}
+
+/* ========================================
+   MAPA
+======================================== */
+
+.coverage-map {
+  position: relative;
+
+  min-height: 520px;
+  padding: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+  isolation: isolate;
+
+  background-color: #101010;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+}
+
+/* Detalle decorativo */
+
+.coverage-map::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 3px;
+
+  background-color: var(--color-red);
+}
+
+.coverage-map p {
+  color: var(--color-text-secondary);
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* ========================================
+   ZONAS
+======================================== */
+
+.coverage-zones {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+/* Tarjeta de zona */
+
+.coverage-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 25px;
+  text-align: center;
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background-color 0.3s ease;
+}
+
+/* Nombre de la zona */
+
+.coverage-card h3 {
+  color: var(--color-red);
+
+  font-size: 1.1rem;
+
+  margin-bottom: 15px;
+}
+
+/* Localidades */
+
+.coverage-card ul {
+  list-style: none;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.coverage-card li {
+  padding: 5px 9px;
+
+  color: var(--color-text-secondary);
+  background-color: var(--color-bg-secondary);
+
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+
+  font-size: 0.78rem;
+  line-height: 1.3;
+}
+
+/* ========================================
+   CTA DE COBERTURA
+======================================== */
+
+.coverage-cta {
+  margin-top: 35px;
+  padding: 25px 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+
+  background-color: var(--color-bg-secondary);
+  border-left: 3px solid var(--color-red);
+}
+
+.coverage-cta p {
+  max-width: 700px;
+
+  color: var(--color-white);
+
+  font-size: 1rem;
+  font-weight: 600;
+}
+.coverage-cta .btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-left: auto;
+
+  min-width: 210px;
+  min-height: 52px;
+  padding: 12px 24px;
+
+  text-align: center;
+  line-height: 1.2;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* RECORRIDOS LOGÍSTICOS DECORATIVOS */
+.map-decorative-routes {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: fill;
+  opacity: 1;
+
+  z-index: 3;
+  pointer-events: none;
+}
+/* NUESTRO MAPA ORIGINAL */
+#coverage-map-svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  top: -2px;
+  left: 7px;
+
+  z-index: 2;
+}
+.coverage-card:hover,
+.coverage-card.is-active {
+  border-color: rgba(211, 47, 47, 0.65);
+  background-color: rgba(211, 47, 47, 0.08);
+  transform: translateY(-3px);
+}
+.coverage-card-footer {
+  width: 100%;
+  margin-top: auto;
+  padding-top: 20px;
+  text-align: left;
+}
+
+.coverage-card-line {
+  display: block;
+  width: 48px;
+  height: 3px;
+  margin-bottom: 18px;
+
+  background-color: var(--color-red);
+  border-radius: 10px;
+}
+
+.coverage-card-status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: var(--color-text);
+  font-size: 0.9rem;
+}
+
+.coverage-truck {
+  display: inline-flex;
+  width: 32px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.coverage-truck svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.truck-box {
+  fill: #ffffff;
+}
+
+.truck-cab {
+  fill: var(--color-red);
+}
+
+.truck-wheel {
+  fill: #ffffff;
+  stroke: var(--color-red);
+  stroke-width: 2;
+}
+/* Capa decorativa */
+.map-route {
+  position: absolute;
+  top: 28px;
+  left: 200px;
+
+  width: 300px;
+  height: 155px;
+
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* Marca superior */
+.map-route-brand {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.map-water-reference {
+  position: absolute;
+
+  top: 40%;
+  left: 35%;
+
+  z-index: 4;
+  pointer-events: none;
+
+  transform: rotate(40deg);
+  transform-origin: center;
+}
+
+.map-water-reference span {
+  display: block;
+
+  color: rgba(255, 255, 255, 0.13);
+
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 5px;
+
+  white-space: nowrap;
+}
+
+/* PIN ORIGINAL E-WEST */
+.map-route-start-pin {
+  width: 55px;
+  height: 55px;
+
+  object-fit: contain;
+  flex-shrink: 0;
+  transform: translateX(-10px);
+}
+
+/* Texto */
+.map-route-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.map-route-text strong {
+  color: #fff;
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+.map-route-text span {
+  margin-top: 3px;
+
+  color: var(--color-red);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.map-route-text small {
+  margin-top: 10px;
+
+  color: #fff;
+  font-size: 0.58rem;
+  line-height: 1.35;
+  letter-spacing: 1.5px;
+}
+
+/* Camino */
+.map-route-line {
+  position: absolute;
+
+  top: 42px;
+  left: 5px;
+
+  width: 285px;
+  height: 115px;
+
+  overflow: visible;
+}
+
+.map-route-line > path {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.9);
+  stroke-width: 2.5;
+
+  stroke-dasharray: 7 7;
+  stroke-linecap: round;
+}
+
+/* Camioncito */
+.map-route-truck rect {
+  fill: #fff;
+}
+
+.map-route-truck path {
+  fill: var(--color-red);
+}
+
+.map-route-truck circle {
+  fill: #fff;
+  stroke: var(--color-red);
+  stroke-width: 2;
+}
+
+/* Pin destino */
+.map-route-destination path,
+.map-route-destination ellipse {
+  fill: none;
+  stroke: var(--color-red);
+  stroke-width: 2.5;
+}
+
+.map-route-destination circle {
+  fill: var(--color-red);
+}
+/* =========================
+   LEYENDA DEL MAPA
+========================= */
+
+.map-legend {
+  position: absolute;
+  left: 425px;
+  bottom: 10px;
+
+  width: 165px;
+  padding: 16px;
+
+  background-color: rgba(16, 16, 16, 0.72);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+
+  z-index: 6;
+}
+
+.map-legend-zones {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.map-legend-zones span {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  color: var(--color-white);
+  font-size: 0.8rem;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.legend-color {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+/* Colores de cobertura */
+.legend-color.caba {
+  background-color: #b71c1c;
+}
+
+.legend-color.cordon-1 {
+  background-color: #d32f2f;
+}
+
+.legend-color.cordon-2 {
+  background-color: #ef5350;
+}
+
+.legend-color.cordon-3 {
+  background-color: #ef9a9a;
+}
+
+.map-legend-brand {
+  margin-top: 15px;
+}
+
+.legend-line {
+  display: block;
+  width: 48px;
+  height: 3px;
+  margin-bottom: 10px;
+
+  background-color: var(--color-red);
+  border-radius: 10px;
+}
+
+.map-legend-brand p {
+  margin: 0;
+
+  color: var(--color-white);
+  font-size: 0.72rem;
+  line-height: 1.45;
+  letter-spacing: 3px;
+}
+/* ========================================
+   QUIÉNES SOMOS
+======================================== */
+.about .section-tag {
+  color: var(--color-red);
+}
+.about {
+  background-color: var(--color-bg-secondary);
+}
+.about-text .about-highlight {
+  color: var(--color-white);
+  font-weight: 700;
+  margin-top: 25px;
+}
+/* Contenido principal */
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: 70px;
+  align-items: center;
+}
+
+/* ========================================
+   TEXTO
+======================================== */
+
+.about-text {
+  max-width: 650px;
+}
+
+.about-text > p {
+  color: var(--color-text-secondary);
+
+  font-size: 1rem;
+  line-height: 1.8;
+
+  margin-bottom: 18px;
+}
+/* ========================================
+   ESTADÍSTICAS
+======================================== */
+
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  width: 100%;
+  margin-top: 40px;
+
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+
+  overflow: hidden;
+}
+
+.about-stats .stat {
+  width: 100%;
+  padding: 25px 20px;
+  margin: 0;
+  text-align: center;
+  border-right: 1px solid var(--color-border);
+}
+
+.about-stats .stat:last-child {
+  border-right: none;
+}
+
+.stat strong {
+  display: block;
+
+  color: var(--color-red);
+
+  font-size: 2rem;
+  line-height: 1;
+
+  margin-bottom: 10px;
+}
+
+.stat span {
+  color: var(--color-text-secondary);
+
+  font-size: 0.85rem;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.about-stats .stat strong .counter {
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+/* ========================================
+   IMAGEN
+======================================== */
+
+.about-image {
+  position: relative;
+
+  min-height: 520px;
+
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+
+  overflow: hidden;
+}
+
+/* Imagen */
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  inset: 0;
+
+  object-fit: cover;
+  object-position: center;
+
+  display: block;
+
+  transition: transform 0.5s ease;
+}
+
+/* Línea roja inferior */
+
+.about-image::after {
+  content: "";
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 80px;
+  height: 3px;
+
+  background-color: var(--color-red);
+
+  z-index: 2;
+}
+
+/* Efecto sutil */
+
+.about-image:hover img {
+  transform: scale(1.02);
+}
+
+/* ========================================
+   MENSAJE FINAL
+======================================== */
+
+.about-message {
+  margin-top: 35px;
+
+  padding-left: 20px;
+
+  border-left: 3px solid var(--color-red);
+}
+
+.about-message p {
+  color: var(--color-white);
+
+  font-size: 1.05rem;
+  font-weight: 600;
+
+  line-height: 1.6;
+}
+/* ========================================
+   ¿SOS VENDEDOR?
+======================================== */
+
+.sellers {
+  background-color: var(--color-bg);
+}
+/* Botón WhatsApp - ¿Sos vendedor? */
+.sellers-whatsapp {
+  background-color: var(--color-red);
+  border-color: var(--color-red);
+  color: var(--color-white);
+}
+
+.sellers-whatsapp:hover {
+  background-color: var(--color-red-hover);
+  border-color: var(--color-red-hover);
+  color: var(--color-white);
+}
+
+/* Contenido principal */
+
+.sellers-content {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+/* ========================================
+   TEXTO COMERCIAL
+======================================== */
+
+.sellers-info {
+  position: sticky;
+  top: 120px;
+}
+
+.sellers-info h2 {
+  max-width: 520px;
+
+  color: var(--color-white);
+
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  line-height: 1.1;
+
+  margin-bottom: 25px;
+}
+
+.sellers-info > p:not(.section-tag) {
+  max-width: 560px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 1rem;
+  line-height: 1.8;
+
+  margin-bottom: 18px;
+}
+
+/* Frase final */
+
+.sellers-highlight {
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  padding-left: 20px;
+
+  border-left: 3px solid var(--color-red);
+
+  color: var(--color-white);
+
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+/* ========================================
+   CONTENEDOR DE CONTACTO COMERCIAL
+======================================== */
+
+.sellers-contact-container {
+  padding: 40px;
+
+  background-color: var(--color-card);
+
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+}
+/* ========================================
+   CONTACTO COMERCIAL - VENDEDORES
+======================================== */
+
+.sellers-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.seller-contact-header {
+  margin-bottom: 30px;
+}
+
+.seller-contact-header h3 {
+  color: var(--color-red);
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+.seller-contact-header p {
+  color: var(--color-text-secondary);
+}
+
+.seller-contact-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.seller-contact-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 25px;
+
+  padding: 25px;
+
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.seller-contact-card:hover {
+  border-color: var(--color-red);
+  transform: translateY(-3px);
+}
+
+.seller-contact-label {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: var(--color-red);
+
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.seller-contact-card h4 {
+  margin-bottom: 10px;
+
+  color: var(--color-white);
+
+  font-size: 1.1rem;
+}
+
+.seller-contact-card p {
+  color: var(--color-text-secondary);
+
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.seller-contact-button {
+  width: fit-content;
+  padding: 13px 22px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.seller-email-link {
+  display: inline-block;
+
+  color: var(--color-white);
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  text-decoration: none;
+  word-break: break-word;
+
+  transition: color 0.3s ease;
+}
+
+.seller-email-link:hover {
+  color: var(--color-red);
+}
+
+.seller-contact-note {
+  width: fit-content;
+  padding: 20px;
+  background-color: rgba(211, 47, 47, 0.06);
+  border-left: 3px solid var(--color-red);
+  border-radius: 0 6px 6px 0;
+}
+
+.seller-contact-note strong {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: var(--color-white);
+}
+
+.seller-contact-note p {
+  margin: 0;
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+/* ========================================
+   CONTACTO
+======================================== */
+
+/* CTA FINAL */
+.contact-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+
+  margin-top: 40px;
+  padding: 35px 40px;
+
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-red);
+  border-radius: 8px;
+}
+
+.contact-cta-text {
+  max-width: 650px;
+}
+
+.contact-cta-label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: var(--color-red);
+
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.contact-cta h3 {
+  margin-bottom: 10px;
+
+  color: var(--color-white);
+
+  font-size: 1.4rem;
+}
+
+.contact-cta p {
+  margin: 0;
+
+  color: var(--color-text-secondary);
+
+  line-height: 1.6;
+}
+
+.contact-cta-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  flex-shrink: 0;
+}
+
+.contact-cta-actions .btn-primary,
+.contact-cta-actions .btn-secondary {
+  white-space: nowrap;
+}
+
+.contact {
+  background-color: var(--color-bg-secondary);
+}
+
+/* ========================================
+   ENCABEZADO
+======================================== */
+
+.contact-header {
+  max-width: 760px;
+  margin: 0 auto 55px;
+
+  text-align: center;
+}
+
+.contact-header .section-tag {
+  margin-bottom: 12px;
+}
+
+.contact-header h2 {
+  color: var(--color-white);
+
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  line-height: 1.1;
+
+  margin-bottom: 18px;
+}
+
+.contact-header > p:not(.section-tag) {
+  color: var(--color-text-secondary);
+
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* ========================================
+   CANALES DE CONTACTO
+======================================== */
+
+.contact-channels {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  max-width: 1000px;
+
+  margin: 0 auto 55px;
+
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  border-left: 1px solid var(--color-border);
+  border-right: 1px solid var(--color-border);
+  border-radius: 6px;
+}
+
+.contact-channel {
+  position: relative;
+  min-width: 0;
+  padding: 28px 30px;
+  text-align: center;
+}
+
+/* División vertical entre columnas */
+.contact-channel:nth-child(odd) {
+  border-right: 1px solid var(--color-border);
+}
+
+/* División horizontal entre filas */
+.contact-channel:nth-child(-n + 2) {
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Línea roja animada */
+
+.contact-channel::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: -1px;
+
+  width: 0;
+  height: 2px;
+
+  background-color: var(--color-red);
+
+  transform: translateX(-50%);
+
+  transition: width 0.3s ease;
+}
+
+.contact-channel:hover::after {
+  width: 70%;
+}
+
+/* Categoría */
+
+.contact-channel span {
+  display: block;
+
+  color: var(--color-red);
+
+  font-size: 0.8rem;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+
+  margin-bottom: 10px;
+}
+
+/* Dato principal */
+
+.contact-channel strong {
+  display: block;
+
+  color: var(--color-white);
+
+  font-size: 1rem;
+
+  margin-bottom: 7px;
+
+  overflow-wrap: anywhere;
+}
+
+/* Descripción */
+
+.contact-channel p {
+  color: var(--color-text-secondary);
+
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+/* ========================================
+   FOOTER
+======================================== */
+
+.footer {
+  background-color: #0b0b0b;
+  border-top: 1px solid var(--color-border);
+  padding: 30px 0 15px;
+}
+
+.footer-container {
+  width: min(90%, var(--container-width));
+  margin: 0 auto;
+}
+
+/* ========================================
+   CONTENIDO PRINCIPAL
+======================================== */
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 0px;
+}
+
+/* Marca */
+
+.footer-brand .logo {
+  display: inline-block;
+  margin-bottom: 18px;
+}
+
+.footer-brand > p {
+  max-width: 360px;
+
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* ========================================
+   NAVEGACIÓN Y CONTACTO
+======================================== */
+
+.footer h3 {
+  color: var(--color-white);
+
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+
+  margin-bottom: 8px;
+}
+/* ========================================
+   PARTE INFERIOR
+======================================== */
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  padding-top: 15px;
+
+  border-top: 1px solid var(--color-border);
+  grid-column: 1 / -1;
+}
+
+.footer-bottom p {
+  color: #777;
+  font-size: 0.8rem;
+}
+.footer-bottom a {
+  color: var(--color-white);
+  transition: color 0.3s ease;
+}
+
+.footer-bottom a:hover,
+.footer-bottom a:focus-visible,
+.footer-bottom a:active {
+  color: var(--color-red);
+}
+
+/* ========================================
+   COLUMNAS DEL FOOTER
+======================================== */
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.footer-column a,
+.footer-column p {
+  color: var(--color-text-secondary);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.footer-column a {
+  transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+  color: var(--color-red);
+}
+/* ========================================
+   ICONOS DE CONTACTO DEL FOOTER
+======================================== */
+
+.footer-contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.footer-contact-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: currentColor;
+  transition: color 0.3s ease;
+}
+
+/* Mantener los textos alineados */
+.footer-contact-link span {
+  line-height: 1.5;
+}
+
+/* Efecto al pasar el mouse o navegar con teclado */
+.footer-contact-link:hover,
+.footer-contact-link:focus-visible {
+  color: var(--color-red);
+}
+/* ========================================
+   POLÍTICA DE PRIVACIDAD
+======================================== */
+
+.privacy-page {
+  min-height: 100vh;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* Encabezado */
+.privacy-header {
+  padding: 30px 5%;
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.privacy-header .section-container {
+  padding: 0;
+}
+
+.privacy-back {
+  display: inline-block;
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.privacy-back:hover {
+  color: var(--color-red);
+}
+
+/* Contenido */
+.privacy-main {
+  padding: 80px 5% 100px;
+}
+
+.privacy-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Encabezado de la página */
+.privacy-container > .section-tag {
+  margin-bottom: 15px;
+}
+
+.privacy-container h1 {
+  color: var(--color-white);
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
+
+.privacy-intro {
+  max-width: 780px;
+  color: var(--color-text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 60px;
+}
+
+/* Secciones */
+.privacy-section {
+  padding: 35px 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.privacy-section h2 {
+  color: var(--color-white);
+  font-size: 1.35rem;
+  line-height: 1.3;
+  margin-bottom: 18px;
+}
+
+.privacy-section p {
+  color: var(--color-text-secondary);
+  font-size: 0.98rem;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.privacy-section p:last-child {
+  margin-bottom: 0;
+}
+
+/* Listas */
+.privacy-section ul {
+  margin: 20px 0;
+  padding-left: 22px;
+}
+
+.privacy-section li {
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin-bottom: 8px;
+}
+
+.privacy-section strong {
+  color: var(--color-white);
+}
+
+/* Última actualización */
+.privacy-update {
+  margin-top: 40px;
+  padding-top: 25px;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  font-size: 0.85rem;
+}
+/* ========================================
+   AJUSTE INTERMEDIO - COBERTURA
+   Pantallas de hasta 1280px
+======================================== */
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .coverage-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .coverage-map {
+    width: 100%;
+  }
+
+  .coverage-zones {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .map-route {
+    left: 400px;
+  }
+
+  .map-legend {
+    left: auto;
+    right: 10px;
+  }
+}
+/* ========================================
+   RESPONSIVE - NOTEBOOK / TABLET HORIZONTAL
+   1024px o menos
+======================================== */
+
+@media (max-width: 1024px) {
+  /* -------------------------
+     GENERAL
+  ------------------------- */
+
+  .section-container {
+    width: min(92%, var(--container-width));
+  }
+
+  .services,
+  .process,
+  .why-us,
+  .coverage,
+  .about,
+  .sellers,
+  .contact {
+    padding: 80px 0;
+  }
+
+  /* -------------------------
+     HEADER
+  ------------------------- */
+
+  .header {
+    left: 0;
+    right: 0;
+    width: auto;
+  }
+
+  .header-container {
+    position: relative;
+    width: 92%;
+    gap: 20px;
+  }
+
+  .header .nav,
+  .header .btn-whatsapp {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+    margin-left: auto;
+    padding: 0;
+
+    color: var(--color-white);
+    background: transparent;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+
+    font-size: 1.6rem;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  .header .nav {
+    position: absolute;
+
+    top: 80px;
+    right: 0;
+    left: auto;
+
+    width: min(320px, 92vw);
+
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+
+    padding: 10px 0;
+
+    background-color: var(--color-bg-secondary);
+
+    border: 1px solid var(--color-border);
+    border-top: none;
+    border-radius: 0 0 6px 6px;
+  }
+
+  .header .nav.is-open {
+    display: flex;
+  }
+
+  .header .nav a {
+    width: 100%;
+    padding: 14px 20px;
+
+    font-size: 0.95rem;
+    white-space: normal;
+  }
+
+  .header .nav a:hover {
+    background-color: var(--color-card);
+  }
+
+  /* -------------------------
+     HERO
+  ------------------------- */
+
+  .hero {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .hero h1 {
+    max-width: 760px;
+    font-size: clamp(3rem, 7vw, 4.7rem);
+  }
+
+  .hero-description {
+    max-width: 650px;
+  }
+
+  /* -------------------------
+     SERVICIOS
+  ------------------------- */
+
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* -------------------------
+     CÓMO TRABAJAMOS
+  ------------------------- */
+
+  .process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 40px;
+    row-gap: 50px;
+  }
+
+  .process-step {
+    padding-right: 20px;
+  }
+
+  .process-step::after,
+  .route-dots {
+    display: none;
+  }
+
+  .process-step p {
+    max-width: none;
+  }
+
+  /* -------------------------
+     ¿POR QUÉ E-WEST?
+  ------------------------- */
+
+  .why-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* -------------------------
+     COBERTURA
+  ------------------------- */
+
+  .coverage-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .coverage-map {
+    width: 100%;
+  }
+
+  .coverage-zones {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .map-route {
+    left: 280px;
+  }
+
+  .map-legend {
+    left: auto;
+    right: 10px;
+  }
+
+  .coverage-cta {
+    gap: 25px;
+  }
+
+  /* -------------------------
+     QUIÉNES SOMOS
+  ------------------------- */
+
+  .about-content {
+    gap: 40px;
+  }
+
+  .about-image {
+    align-self: start;
+    min-height: 0;
+    height: 430px;
+  }
+
+  /* -------------------------
+     VENDEDORES
+  ------------------------- */
+
+  .sellers-content {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .sellers-info {
+    position: static;
+  }
+
+  /* -------------------------
+     CONTACTO
+  ------------------------- */
+
+  .contact-cta {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 25px;
+  }
+
+  .contact-cta-text {
+    max-width: none;
+  }
+
+  .contact-cta-actions .btn-primary,
+  .contact-cta-actions .btn-secondary {
+    flex: 1;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* -------------------------
+     FOOTER
+  ------------------------- */
+
+  .footer-content {
+    grid-template-columns: 1.3fr 0.8fr 1.1fr;
+    gap: 30px;
+  }
+}
+
+/* ========================================
+   RESPONSIVE - TABLET
+   768px o menos
+======================================== */
+
+@media (max-width: 768px) {
+  /* -------------------------
+     GENERAL
+  ------------------------- */
+
+  .section-container {
+    width: 90%;
+  }
+
+  .services,
+  .process,
+  .why-us,
+  .coverage,
+  .about,
+  .sellers,
+  .contact {
+    padding: 70px 0;
+  }
+
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  /* -------------------------
+     HERO
+  ------------------------- */
+
+  .hero {
+    padding: 125px 5% 70px;
+  }
+
+  .hero h1 {
+    max-width: 680px;
+    font-size: clamp(2.7rem, 8vw, 4rem);
+  }
+
+  .hero-description {
+    font-size: 1.05rem;
+  }
+
+  /* -------------------------
+     COBERTURA
+  ------------------------- */
+
+  .coverage-map {
+    min-height: 500px;
+  }
+
+  .map-route {
+    left: 38%;
+  }
+
+  .map-legend {
+    right: 10px;
+  }
+
+  .coverage-cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .coverage-cta .btn-primary {
+    margin-left: 0;
+  }
+
+  /* -------------------------
+     QUIÉNES SOMOS
+  ------------------------- */
+
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .about-text {
+    max-width: none;
+  }
+
+  .about-image {
+    width: 100%;
+    height: auto;
+    min-height: 430px;
+  }
+
+  /* -------------------------
+     VENDEDORES
+  ------------------------- */
+
+  .seller-contact-options {
+    grid-template-columns: 1fr;
+  }
+
+  /* -------------------------
+     CONTACTO
+  ------------------------- */
+
+  .contact-channels {
+    grid-template-columns: 1fr;
+  }
+
+  /* Eliminamos las divisiones verticales */
+  .contact-channel:nth-child(odd) {
+    border-right: none;
+  }
+
+  /* Todas las tarjetas, excepto la última,
+   tienen una línea inferior */
+  .contact-channel {
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .contact-channel:last-child {
+    border-bottom: none;
+  }
+
+  /* Evitamos que el correo se desborde */
+  .contact-channel[href^="mailto:"] strong {
+    white-space: normal;
+  }
+
+  /* -------------------------
+     FOOTER
+  ------------------------- */
+
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  /* -------------------------
+     PRIVACIDAD
+  ------------------------- */
+
+  .privacy-header {
+    padding: 25px 6%;
+  }
+
+  .privacy-main {
+    padding: 60px 6% 80px;
+  }
+
+  .privacy-intro {
+    margin-bottom: 40px;
+  }
+
+  .privacy-section {
+    padding: 28px 0;
+  }
+
+  .privacy-section h2 {
+    font-size: 1.2rem;
+  }
+}
+
+/* ========================================
+   RESPONSIVE - MÓVIL
+   480px o menos
+======================================== */
+
+@media (max-width: 480px) {
+  /* -------------------------
+     GENERAL
+  ------------------------- */
+
+  .section-container {
+    width: 90%;
+  }
+
+  .services,
+  .process,
+  .why-us,
+  .coverage,
+  .about,
+  .sellers,
+  .contact {
+    padding: 60px 0;
+  }
+
+  .section-header {
+    margin-bottom: 35px;
+  }
+
+  .section-header h2 {
+    font-size: 2rem;
+  }
+
+  /* -------------------------
+     HEADER
+  ------------------------- */
+
+  .header-container {
+    width: 90%;
+    height: 72px;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+  }
+
+  .header .nav {
+    top: 72px;
+    right: 0;
+    width: min(300px, 90vw);
+  }
+
+  /* -------------------------
+     HERO
+  ------------------------- */
+
+  .hero {
+    min-height: 100svh;
+    padding: 110px 5% 55px;
+
+    background:
+      linear-gradient(
+        90deg,
+        rgba(16, 16, 16, 1) 0%,
+        rgba(16, 16, 16, 0.96) 45%,
+        rgba(16, 16, 16, 0.72) 100%
+      ),
+      url("../assets/img/hero-logistica.png");
+
+    background-size: cover;
+    background-position: center;
+  }
+
+  .hero-tag {
+    font-size: 0.78rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
+  }
+
+  .hero h1 {
+    max-width: 100%;
+    font-size: clamp(2.15rem, 10vw, 2.7rem);
+    line-height: 1.05;
+    letter-spacing: -1px;
+    margin-bottom: 22px;
+  }
+
+  .hero-description {
+    max-width: 100%;
+    font-size: 1rem;
+    line-height: 1.65;
+    margin-bottom: 28px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-buttons .btn-primary,
+  .hero-buttons .btn-secondary {
+    width: 100%;
+  }
+
+  /* -------------------------
+     SERVICIOS
+  ------------------------- */
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    min-height: 0;
+    padding: 25px;
+  }
+
+  /* -------------------------
+     CÓMO TRABAJAMOS
+  ------------------------- */
+
+  .process-grid {
+    grid-template-columns: 1fr;
+    row-gap: 35px;
+  }
+
+  .process-step {
+    padding-right: 0;
+  }
+
+  .step-number {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 18px;
+  }
+
+  .process-summary {
+    padding: 22px;
+  }
+
+  /* -------------------------
+     ¿POR QUÉ E-WEST?
+  ------------------------- */
+
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-card {
+    min-height: 0;
+    padding: 25px;
+  }
+
+  .why-message {
+    padding: 22px;
+  }
+
+  /* -------------------------
+     COBERTURA
+  ------------------------- */
+
+  .coverage-map {
+    min-height: 420px;
+    padding: 15px;
+  }
+
+  #coverage-map-svg {
+    left: 0;
+  }
+
+  .map-route {
+    top: 22px;
+    left: 84px;
+
+    width: 260px;
+    height: 145px;
+
+    transform: scale(0.82);
+    transform-origin: top left;
+  }
+
+  .map-legend {
+    left: auto;
+    right: 8px;
+    bottom: 8px;
+
+    width: 134px;
+    padding: 8px;
+  }
+
+  .map-legend-zones {
+    gap: 4px;
+  }
+
+  .map-legend-zones span {
+    gap: 7px;
+    font-size: 0.7rem;
+  }
+
+  .legend-color {
+    width: 11px;
+    height: 11px;
+  }
+
+  .map-legend-brand p {
+    font-size: 0.62rem;
+    letter-spacing: 2px;
+  }
+
+  .coverage-zones {
+    grid-template-columns: 1fr;
+  }
+
+  .coverage-card {
+    padding: 22px;
+  }
+
+  .coverage-cta {
+    margin-top: 30px;
+    padding: 22px;
+  }
+
+  .coverage-cta .btn-primary {
+    width: 100%;
+    min-width: 0;
+    white-space: normal;
+  }
+
+  /* -------------------------
+     QUIÉNES SOMOS
+  ------------------------- */
+
+  .about-image {
+    min-height: 0;
+    height: 360px;
+  }
+
+  .about-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .about-stats .stat {
+    padding: 22px 15px;
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .about-stats .stat:last-child {
+    border-bottom: none;
+  }
+
+  .about-message {
+    margin-top: 30px;
+  }
+
+  /* -------------------------
+     VENDEDORES
+  ------------------------- */
+
+  .sellers-info h2 {
+    font-size: 2.2rem;
+  }
+
+  .sellers-contact-container {
+    padding: 25px;
+  }
+
+  .seller-contact-card {
+    padding: 22px;
+  }
+
+  .seller-contact-note {
+    width: 100%;
+  }
+
+  /* -------------------------
+     CONTACTO
+  ------------------------- */
+
+  .contact-header {
+    margin-bottom: 40px;
+  }
+
+  .contact-header h2 {
+    font-size: 2.2rem;
+  }
+
+  .contact-channels {
+    margin-bottom: 40px;
+  }
+
+  .contact-channel {
+    padding: 25px 20px;
+  }
+
+  .contact-cta {
+    margin-top: 30px;
+    padding: 28px 22px;
+  }
+
+  .contact-cta-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .contact-cta-actions .btn-primary,
+  .contact-cta-actions .btn-secondary {
+    width: 100%;
+  }
+
+  /* -------------------------
+     FOOTER
+  ------------------------- */
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .footer-brand {
+    grid-column: auto;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* -------------------------
+     PRIVACIDAD
+  ------------------------- */
+
+  .privacy-header {
+    padding: 22px 5%;
+  }
+
+  .privacy-main {
+    padding: 50px 5% 70px;
+  }
+
+  .privacy-container h1 {
+    font-size: 2.2rem;
+  }
+
+  .privacy-intro {
+    font-size: 1rem;
+    margin-bottom: 35px;
+  }
+}
+
+/* ========================================
+   RESPONSIVE - MÓVIL PEQUEÑO
+   360px o menos
+======================================== */
+
+@media (max-width: 360px) {
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .menu-toggle {
+    width: 42px;
+    height: 42px;
+  }
+
+  .hero {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+  }
+
+  .service-card,
+  .why-card,
+  .coverage-card {
+    padding: 20px;
+  }
+
+  .coverage-map {
+    min-height: 390px;
+  }
+
+  .map-route {
+    left: 58px;
+    transform: scale(0.72);
+    transform-origin: top left;
+  }
+
+  .map-legend {
+    width: 105px;
+    padding: 8px;
+  }
+
+  .contact-cta {
+    padding: 24px 18px;
+  }
+
+  .sellers-contact-container {
+    padding: 20px;
+  }
+
+  .privacy-container h1 {
+    font-size: 2rem;
+  }
+}

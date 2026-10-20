@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 900 720"
+     preserveAspectRatio="none">
+
+  <!-- Recorrido gris superior -->
+  <path
+    d="M-30 220 C130 100 260 300 450 180 S750 80 940 230"
+    fill="none"
+    stroke="#777777"
+    stroke-width="1.5"
+    stroke-dasharray="5 9"
+    opacity="0.7"
+  />
+
+  <!-- Recorrido rojo central -->
+  <path
+    d="M-40 470 C180 350 290 570 490 390 S760 310 940 460"
+    fill="none"
+    stroke="#D32F2F"
+    stroke-width="1.5"
+    stroke-dasharray="7 10"
+    opacity="0.65"
+  />
+
+  <!-- Recorrido gris inferior -->
+  <path
+    d="M-30 650 C180 520 330 750 570 590 S780 500 940 620"
+    fill="none"
+    stroke="#777777"
+    stroke-width="1.5"
+    stroke-dasharray="4 10"
+    opacity="0.65"
+  />
+
+</svg>
